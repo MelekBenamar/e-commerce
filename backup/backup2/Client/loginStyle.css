@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(assets/Untitled\ design.png);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.center {
+    position: absolute;
+    border-radius: 25px;
+    border-color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    background: rgba(255, 255, 255, 0.829);
+    animation: fadeIn 1s ease-out 1s;
+}
+
+.center h1 {
+    color: #3a4a68;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+    animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+.center form {
+    padding: 0 40px;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s ease-out 0.5s forwards;
+}
+
+form .txt_field {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s ease-out .5s forwards;
+}
+
+.txt_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #383838;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #3a4a68;
+    transition: .5s;
+}
+
+.txt_field input:focus~label,
+.txt_field input:valid~label {
+    top: -5px;
+    color: #3a4a68;
+}
+
+.txt_field input:focus~span::before,
+.txt_field input:valid~span::before {
+    width: 100%;
+}
+
+.pass {
+    margin: -5px 0 20px 5px;
+    color: #6d6d6d;
+    cursor: pointer;
+}
+
+.pass:hover {
+    text-decoration: underline;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #3a4a68;
+    background: #3a4a68;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s ease-out 0.5s forwards;
+}
+
+input[type="submit"]:hover {
+    border-color: #3a4a68;
+    transition: .5s;
+}
+
+.signup_link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #6d6d6d;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 0.5s ease-out 0.5s forwards;
+}
+
+.signup_link a {
+    color: #3a4a68;
+    text-decoration: none;
+}
+
+.signup_link a:hover {
+    text-decoration: underline;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

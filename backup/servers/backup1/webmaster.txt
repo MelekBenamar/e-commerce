@@ -1,0 +1,39 @@
+index.html:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Web Page</title>
+</head>
+<body>
+    <h1>My Fetched Data</h1>
+    <ul id="data-list"></ul>
+
+    <script src="fetch-data.js"></script>
+</body>
+</html>
+
+fetch-data.js:
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        const response = await fetch("http://192.168.1.202:3000/api/data");
+        const data = await response.json();
+
+        const dataList = document.getElementById("data-list");
+        dataList.innerHTML = ''; // Clear existing data-list content
+
+        // Iterate over each user in the data array
+        data.forEach(user => {
+            // Create a list item element for each user
+            const li = document.createElement("li");
+
+            // Set the text content of the list item to display user inform>            li.textContent = `Name: ${user.username},Password: ${user.passw>
+
+            // Append the list item to the data list
+            dataList.appendChild(li);
+        });
+    } catch (error) {
+        console.error("Error fetching data:", error);
+    }
+});

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.top-line {
+    height: 35px;
+    background: #ef3f52;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.top-line a {
+    font-size: 12px;
+    margin-left: 10px; 
+    margin-right: 10px;
+    color: white;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-line img {
+    max-width: 20px; 
+}
+.middle-line {
+    height: 75px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.middle-line div {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.middle-line .user{
+    font-weight: 500;
+    margin-left: 5%; 
+}
+.middle-line .user img {
+    max-width: 35px;
+    margin-right: 10px; 
+}
+
+.middle-line .logo img {
+    max-width: 150px; 
+}
+
+.middle-line .cart {
+    font-weight: 500;
+    margin-right: 5%;
+}
+.middle-line .cart img {
+    max-width: 30px; 
+    margin-right: 10px;
+}
+
+/* Initially hide the purchase card */
+.hidden {
+    display: none;
+}
+
+/* Style the purchase card */
+.purchase-card {
+    position: absolute;
+    top: 14%; /* Adjust as needed */
+    right: 1%; /* Adjust as needed */
+    width: 200px;
+    max-height: 400px;
+    overflow-y: auto; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.purchase-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.delete-icon {
+    width: 20px; /* Adjust the width of the delete icon */
+    height: 20px; /* Adjust the height of the delete icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+
+
+.bottom-line {
+    height: 35px;
+    background: #1d294c;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+.nav-item {
+    font-size: 15px;
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+}
+.nav-item.active {
+    color: #ef3f52; /* Change color of active navbar item */
+}
+
+.card {
+    position: relative; /* Add position relative to use absolute positioning for button */
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: box-shadow 0.3s; /* Add transition effect */
+}
+
+.card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.card-img {
+    border-radius: 5px 5px 0 0;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.card h3 {
+    margin: 5px 0;
+}
+
+.card p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+/* Add to Cart button */
+.add-to-cart {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; 
+}
+
+.card:hover .add-to-cart {
+    display: block;
+}

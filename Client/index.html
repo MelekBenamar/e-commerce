@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' http://localhost:5003;">
+    <title>e-Commerce</title>
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-line">
+            <a href="#">mygmail01@gmail.com</a>
+            <a href="#">+123456789</a>
+            <a href=""><img src="Assets/icons/fb.png" alt="fb">myFacebook</a>
+            <a href=""><img src="Assets/icons/insta.png" alt="insta">myInstagram</a>
+            <a href=""><img src="Assets/icons/linkedin.png" alt="linkedin">myLinkedin</a>
+        </div>
+        <div class="middle-line">
+            <div class="logo">
+                <img src="Assets/icons/Prime.png" alt="logo">
+            </div>
+            <div class="user" id="username-display"></div>
+            <div class="cart">
+                <img src="Assets/icons/cart.png" alt="cart">
+            </div>
+        </div>
+        <div id="login-card" class="login-card hidden">
+            Logout here
+            <button id="logout" class="logout">Logout</button>
+        </div>
+        <div id="purchase-card" class="purchase-card hidden">
+            <p>purchase card :</p>
+            <button id="buy-button" class="buy-button hidden">Buy</button>
+        </div>
+        
+        <div class="bottom-line">
+            <nav class="navbar" id="category-nav">
+                <a href="#" class="nav-item" data-category="clothes">Clothes </a>
+                <a href="#" class="nav-item" data-category="electronics">electronics </a>
+                <a href="#" class="nav-item" data-category="Accessories">Accessories</a>
+            </nav>
+        </div>
+    </header>
+    <div id="product-container" class="container"></div>
+     <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+        <img src="Assets/adds/add1.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+        </div>
+    
+        <div class="mySlides fade">
+        <img src="Assets/adds/add2.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+        </div>
+    
+        <div class="mySlides fade">
+        <img src="Assets/adds/add3.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+    </div>
+
+    <br>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+  
+            <img src="Assets/icons/Prime.png" alt="logo">
+  
+          <p class="footer-links">
+            <a href="#" class="link-1">Home</a>
+            
+            <a href="#">Blog</a>
+          
+            <a href="#">Pricing</a>
+          
+            <a href="#">About</a>
+            
+            <a href="#">Faq</a>
+            
+            <a href="#">Contact</a>
+          </p>
+  
+          <p class="footer-company-name">Prime © 2015</p>
+        </div>
+  
+        <div class="footer-center">
+  
+          <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+          </div>
+  
+          <div>
+            <i class="fa fa-phone"></i>
+            <p>+1.555.555.5555</p>
+          </div>
+  
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:support@company.com">support@company.com</a></p>
+          </div>
+  
+        </div>
+  
+        <div class="footer-right">
+  
+          <p class="footer-company-about">
+            <span>About the company</span>
+            Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+          </p>
+  
+      </footer>
+    <script src="indexscript.js"></script>
+    <script src="handleBuyButtonClick.js"></script>
+    <script src="fetchProducts.js"></script>
+</body>
+</html>

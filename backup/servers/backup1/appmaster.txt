@@ -1,0 +1,56 @@
+const express = require("express");
+const mysql = require("mysql2/promise"); // Using the promise-based version>const app = express();
+
+// MySQL database configuration
+const dbConfig = {
+    host: "192.168.1.103",
+    user: "melek",
+    password: "melek123",
+    database: "dr_test"
+};
+
+// Middleware to enable CORS
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "http://192.168.1.4");
+    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+    res.header("Access-Control-Allow-Headers", "Content-Type");
+    next();
+});
+
+// Function to fetch data from the 'users' table
+async function fetchUsersFromDatabase() {
+    try {
+        // Create a connection to the database
+        const connection = await mysql.createConnection(dbConfig);
+
+        // Query the database to fetch data from the 'users' table
+        const [rows, fields] = await connection.execute("SELECT * FROM login");
+
+        // Close the connection
+        await connection.end();
+
+        console.log(rows);
+
+        return rows;
+    } catch (error) {
+        console.error("Error fetching data from database:", error);
+        return null;
+    }
+}
+
+// Define an API endpoint for fetching data
+app.get("/api/data", async (req, res) => {
+    const users = await fetchUsersFromDatabase();
+    if (users) {
+        res.json(users);
+    } else {
+        res.status(500).json({ error: "Failed to fetch data from the databa>    }
+});
+
+// Other routes and middleware go here
+// ...
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});

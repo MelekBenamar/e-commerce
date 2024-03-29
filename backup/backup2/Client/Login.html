@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="loginStyle.css">
+</head>
+
+<body>
+  <div class="center">
+        <h1 id="formTitle">Login</h1>
+        <form onsubmit="return handleLogin()" id="loginForm" method="post">
+          <div class="txt_field">
+              <input type="text" id="username" required>
+              <span></span>
+              <label for="username" >Username</label>
+          </div>
+          <div class="txt_field">
+              <input type="password" id="password" required>
+              <span></span>
+              <label for="password" >Password</label>
+          </div>
+          <div class="pass">Forgot Password?</div>
+          <input type="submit" value="Login">
+          <div class="signup_link">
+              Not a member? <a href="#" id="signupLink">Signup</a>
+          </div>
+      </form>
+      <form id="signupForm" method="post" style="display: none;">
+        <div class="txt_field">
+            <input type="text" id="fullName" required>
+            <span></span>
+            <label>Full Name</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" id="email" required>
+            <span></span>
+            <label>Email</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" id="password" required>
+            <span></span>
+            <label>Password</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" id="confirmPassword" required>
+            <span></span>
+            <label>Confirm Password</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" id="amount" required>
+            <span></span>
+            <label>Amount of Money</label>
+        </div>
+        <input type="submit" value="Signup" onclick="validateSignup()">
+        <div class="signup_link">
+            Already a member? <a href="#" id="loginLink">Login</a>
+        </div>
+    </form>
+  </div>
+
+  <script src="login_script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.top-line {
+    height: 35px;
+    background: #ef3f52;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.top-line a {
+    font-size: 12px;
+    margin-left: 10px; 
+    margin-right: 10px;
+    color: white;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-line img {
+    max-width: 20px; 
+}
+.middle-line {
+    height: 75px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.middle-line div {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.middle-line .user{
+    font-weight: 500;
+    margin-left: 5%; 
+}
+.middle-line .user img {
+    max-width: 35px;
+    margin-right: 10px; 
+}
+
+.middle-line .logo img {
+    max-width: 150px; 
+}
+
+.middle-line .cart {
+    font-weight: 500;
+    margin-right: 5%;
+}
+.middle-line .cart img {
+    max-width: 30px; 
+    margin-right: 10px;
+}
+
+
+.bottom-line {
+    height: 35px;
+    background: #1d294c;
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+.nav-item {
+    font-size: 15px;
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+}
+.nav-item.active {
+    color: #ef3f52; /* Change color of active navbar item */
+}
+
+.card {
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    display: inline-block;
+    text-align: center; /* Center text horizontally */
+}
+
+.card-img {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 250px; /* Set a fixed height for the image container */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.card-img img {
+    max-width: 100%;
+    max-height: 100%; /* Ensure the image fits within the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Fill the height of the card */
+}
+
+.card h3 {
+    margin: 5px 0;
+}
+
+.card p {
+    margin: 5px 0;
+    font-weight: bold;
+}
