@@ -91,7 +91,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,1,100,'shirt-icon-t-shirt.jpg','shirt'),(2,2,150,'nothing-phone-1.png','Nothing '),(3,3,50,'lunette.jpg','Lunette'),(4,1,150,'dhouha.jpeg','dhouha');
+INSERT INTO `product` VALUES (1,1,100,'shirt.jpg','shirt'),(2,2,150,'nothing-phone-1.png','Nothing phone'),(5,2,800,'samsung-galaxy-s22.jpg','samsung galaxy s22'),(6,1,50,'Cargo pants.jpg','Cargo pants'),(7,3,10,'eyeglasses-wear.jpg','eyeglasses wear'),(8,1,20,'red_and_green_hoodie.jpg','red and green hoodie'),(9,3,40,'calssic_watch.jpg','calssic watch'),(10,3,10,'smart_watch.jpg','smart watch'),(11,2,40,'blender.jpg','blender'),(12,2,500,'four.jpg','four');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -131,4 +131,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-03-24 15:10:13
+-- Dump completed on 2024-04-04 23:39:08
